@@ -1,33 +1,36 @@
 /**
- * Java program to demonstrate that new object of a class should be initialized.
+ * Java program to use this for initialization fields of a class object.
  */
-package com.main;
 
-/**
- * Test class.
- */
-class Test {
-
-    // Method show to print to console
-    void show() {
-        System.out.println("Method show() is called.");
-    }
-}
+package com.initialization;
 
 /**
  * Main class.
  */
 public class Main {
 
+    long number;
+    long number1;
+
+    // Default constructor
+    public Main() {
+
+        this(10L, 20L);
+
+    }
+
+    // Parametrized constructor
+    public Main(long number, long number1) {
+
+        this.number = number;
+        this.number1 = number1;
+
+    }
+
     // Main method to run java program
     public static void main(String[] args) {
 
-        // Creating Test object
-        Test t;
+        Main main = new Main();
 
-        // Compilation error here because t is not initialized
-
-        // Calling method show()
-        t.show();
     }
 }
